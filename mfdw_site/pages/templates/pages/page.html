@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Welcome!</h1>
-    <p>This is the page template</p>
-
+{% autoescape off %}
+{{content}}
+{% endautoescape %}
 {% endblock content %}
