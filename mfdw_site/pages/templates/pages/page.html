@@ -4,6 +4,14 @@
     {{ title }}
 {% endblock title %}
 
+{% block sidenav %}
+    {% for page in pages_list %}
+        <li {% if page.title == title %}id="currentpage"{% endif %}>
+            <a href="{{ page.permalink}}">{{ page.title }}</a>
+        </li>
+    {% endfor %}
+{% endblock sidenav %}
+
 {% block content %}
     {% autoescape off %}
         {{ content }}

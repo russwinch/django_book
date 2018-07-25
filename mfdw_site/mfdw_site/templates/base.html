@@ -24,9 +24,7 @@
             <aside id="leftsidebar">
                 <nav id="nav">
                     <ul>
-                        <li>Menu 1</li>
-                        <li>Menu 2</li>
-                        <li>Menu 3</li>
+                        {% block sidenav %}{% endblock sidenav %}
                     </ul>
                 </nav>
             </aside>
@@ -39,7 +37,7 @@
             </section>
 
             <footer id="footer">
-                Copyright &copy; 2018 Broken Design<span id="lastupdate">{% block lastupdated %}{% endblock lastupdated %}</span>
+                Copyright &copy; {{ current_year }} Broken Design<span id="lastupdate">{% block lastupdated %}{% endblock lastupdated %}</span>
             </footer>
         </div>
     </body>
