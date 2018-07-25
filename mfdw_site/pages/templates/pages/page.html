@@ -1,7 +1,16 @@
 {% extends "base.html" %}
 
+{% block title %}
+    {{ title }}
+{% endblock title %}
+
 {% block content %}
-{% autoescape off %}
-{{content}}
-{% endautoescape %}
+    {% autoescape off %}
+        {{ content }}
+    {% endautoescape %}
 {% endblock content %}
+
+{% block lastupdated %}
+    Page last updated: {{ last_updated|date:'D d F Y'}}
+{% endblock lastupdated %}
+
